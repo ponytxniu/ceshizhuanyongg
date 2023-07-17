@@ -28,7 +28,7 @@ order: 18
 
   # 欢迎来到 Chainlit 👋
 
-  **在几分钟内构建python LLM 应用程序 ⚡️**
+  &nbsp; &nbsp; **在几分钟内构建python LLM 应用程序 ⚡️**
 
   Chainlit 可让您在几分钟之内就在任何Python代码上创建类似于ChatGPT的UI!一些关键功能包括中间步骤的可视化，元素的管理和现实（图像，文本，轮播等）以及云部署
 
