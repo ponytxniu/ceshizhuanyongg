@@ -1,8 +1,8 @@
 ---
 name: Chainlit
 description: >-
-  Build Python LLM apps in minutes ⚡️
-  Chainlit lets you create ChatGPT-like UIs on top of any Python code in minutes! Some of the key features include intermediary steps visualisation, element management & display (images, text, carousel, etc.) as well as cloud deployment.
+  Chainlit 可让您在几分钟之内⚡️就在任何Python代码上创建类似于ChatGPT的UI!一些关键功能包括中间步骤的可视化，元素的管理和现实（图像，文本，轮播等）以及云部署。
+
 author:
   name: Chainlit
   avatar: https://avatars.githubusercontent.com/u/128686189?s=64&v=4
@@ -28,32 +28,32 @@ order: 18
 
   # 欢迎来到 Chainlit 👋
 
- &nbsp;&nbsp; **在几分钟内构建python LLM 应用程序 ⚡️**
+  **在几分钟内构建python LLM 应用程序 ⚡️**
 
-  &nbsp;&nbsp;Chainlit 可让您在几分钟之内就在任何Python代码上创建类似于ChatGPT的UI!一些关键功能包括中间步骤的可视化，元素的管理和现实（图像，文本，轮播等）以及云部署
+  Chainlit 可让您在几分钟之内就在任何Python代码上创建类似于ChatGPT的UI!一些关键功能包括中间步骤的可视化，元素的管理和现实（图像，文本，轮播等）以及云部署
 
-  &nbsp;&nbsp;[![](https://dcbadge.vercel.app/api/server/ZThrUxbAYw?style=flat)](https://discord.gg/ZThrUxbAYw)
-  &nbsp;&nbsp;[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/chainlit_io.svg?style=social&label=Follow%20%40chainlit_io)](https://twitter.com/chainlit_io)
- &nbsp;&nbsp; [![CI](https://github.com/Chainlit/chainlit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Chainlit/chainlit/actions/workflows/ci.yaml)
+  [![](https://dcbadge.vercel.app/api/server/ZThrUxbAYw?style=flat)](https://discord.gg/ZThrUxbAYw)
+  [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/chainlit_io.svg?style=social&label=Follow%20%40chainlit_io)](https://twitter.com/chainlit_io)
+  [![CI](https://github.com/Chainlit/chainlit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Chainlit/chainlit/actions/workflows/ci.yaml)
 
   ## 安装
 
- &nbsp;&nbsp; 打开终端并运行:
+  打开终端并运行:
 
-&nbsp;&nbsp;  ```bash
-&nbsp;&nbsp;  $ pip install chainlit
-&nbsp;&nbsp;  $ chainlit hello
+  ```bash
+  $ pip install chainlit
+  $ chainlit hello
   ```
 
- 
-&nbsp;&nbsp;如果 `hello app`现在在您的浏览器中是打开的状态，则表示您已准备就绪!
-   ## 📖 文档
+  如果 `hello app`现在在您的浏览器中是打开的状态，则表示您已准备就绪!
 
-  &nbsp;&nbsp;请参阅[此处](https://docs.chainlit.io) 以获取有关一下内容的完整文档:
+  ## 📖 文档
 
-  &nbsp;&nbsp;- 入门（安装，简单示例）
-  &nbsp;&nbsp;- 例子
-  &nbsp;&nbsp;- 参考（完整的API文档）
+  请参阅[此处](https://docs.chainlit.io) 以获取有关一下内容的完整文档:
+
+  - 入门（安装，简单示例）
+  - 例子
+  - 参考（完整的API文档）
 
   ## 🚀 快速开始
 
