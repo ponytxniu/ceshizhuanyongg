@@ -1,118 +1,213 @@
 ---
-name: StableStudio
+name: MaryTTS
 description: >-
-  StableStudio 是 Stability AI 的 DreamStudio 的官方开源变体，DreamStudio 是我们用于生成 AI 的用户界面。它是一个基于网络的应用程序，允许用户创建和编辑生成的图像。我们还不完全确定这个项目的进展情况，但我们很高兴看到社区用它做什么！
+  这是多语言开源 MARY 文本转语音平台 (MaryTTS) 的源代码存储库。MaryTTS是一个用纯Java编写的客户端-服务器系统，因此它可以在许多平台上运行。
 author:
-  name: Stability AI
-  avatar: https://avatars.githubusercontent.com/u/100950301?s=88&v=4
+  name: marytts
+  avatar: https://avatars.githubusercontent.com/u/1397306?s=88&v=4
 contributors:
-  - name: cruhl
-    avatar: https://avatars.githubusercontent.com/u/4983357?v=4
+  - name: psibre
+    avatar: https://avatars.githubusercontent.com/u/1278639?s=64&v=4
+  - name: marc1s
+    avatar: https://avatars.githubusercontent.com/u/1101896?s=64&v=4
+  - name: marcelach1
+    avatar: https://avatars.githubusercontent.com/u/1279715?s=64&v=4
+  - name: seblemaguer
+    avatar: https://avatars.githubusercontent.com/u/4820197?s=64&v=4
+  - name: ftesser
+    avatar: https://avatars.githubusercontent.com/u/983665?s=64&v=4
+  - name: aitorme
+    avatar: https://avatars.githubusercontent.com/u/13557954?s=64&v=4
+  - name: HaraldBerthelsen
+    avatar: https://avatars.githubusercontent.com/u/1613228?s=64&v=4
+  - name: timobaumann
+    avatar: https://avatars.githubusercontent.com/u/4908990?s=64&v=4
+  - name: Rootex
+    avatar: https://avatars.githubusercontent.com/u/2598738?s=64&v=4
+  - name: wholder
+    avatar: https://avatars.githubusercontent.com/u/1062514?s=64&v=4
+  - name: giuliopaci
+    avatar: https://avatars.githubusercontent.com/u/311723?s=64&v=4
 language:
-  - language: TypeScript
-    percentage: 99.6
-star: 1.4k
-fork: '80'
-url: https://github.com/Stability-AI/StableStudio
-banner: ./misc/Banner.png
-icon: https://cs-res.codehub.cn/vscode/node.svg
-video: ./misc/StableStudio.mov
-license: MIT
-order: 0
+  - language: Java
+    percentage: 97.4
+  - language: XSLT
+    percentage: 1.1
+  - language: Groovy
+    percentage: 0.6
+  - language: JavaScript
+    percentage: 0.4
+  - language: HTML
+    percentage: 0.3
+  - language: Raku
+    percentage: 0.1
+star: 2k
+fork: '692'
+url: https://github.com/marytts/marytts
+banner: ./tts-banner.png
+icon: https://cs-res.codehub.cn/vscode/java.svg
+video: ./MaryTTS.mov
+license: LGPL-3.0
+order: 4
 ---
 
-<div align="center">
+[![CI](https://github.com/marytts/marytts/actions/workflows/main.yml/badge.svg)](https://github.com/marytts/marytts/actions/workflows/main.yml)
 
-![StableStudio](./misc/Banner.png)
+# MaryTTS
 
-# StableStudio by [Stability AI](https://stability.ai/)
+&nbsp; &nbsp;这是多语言开源 MARY 文本转语音平台 (MaryTTS) 的源代码存储库。MaryTTS是一个用纯Java编写的客户端-服务器&nbsp; &nbsp;系统，因此它可以在许多平台上运行。
+**要获取可供使用的可下载包，请参阅[发布页面](https://github.com/marytts/marytts/releases).**
 
-**👋 欢迎来到[DreamStudio](https://www.dreamstudio.ai)的开源版本 StableStudio 的社区存储库**
+&nbsp; &nbsp;较老的文档也可以在 https://github.com/marytts/marytts-wiki, http://mary.dfki.de 和 https://mary.opendfki.de 中找到
 
-**🗺 内容 – [🚀 快速入门](#quick-start) · [ℹ️ 关于](#about) · [🙋 FAQ](#faq) · [🧑‍💻 贡献](#contributing)**
+&nbsp; &nbsp;该README是 MaryTTS 源代码存储库的一部分。它包含有关编译和开发 MaryTTS 源的信息。
 
-**📚 文档 – [🎨 用户界面](./packages/stablestudio-ui/README.md) · [🔌 插件](./packages/stablestudio-plugin/README.md) · <a href="https://platform.stability.ai" target="_blank">⚡️ 平台.稳定性.ai</a>**
+&nbsp; &nbsp;该代码采用较宽松的通用公共许可证 LGPL 版本 3 - 请参阅 LICENSE.md 了解详细信息。
 
-**🔗 链接 – <a href="https://discord.com/channels/1002292111942635562/1108055793674227782" target="_blank">🎮 Discord</a> · <a href="https://dreamstudio.ai" target="_blank">🌈 DreamStudio</a> · <a href="https://github.com/Stability-AI/StableStudio/issues">🛟 Bugs & 支持</a> · <a href="https://github.com/Stability-AI/StableStudio/discussions">💬 讨论</a>**
 
-</div>
+## 运行 MaryTTS
 
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1em; margin: 4em 0;">
-  <img src="./misc/GenerateScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;" />
-  <img src="./misc/EditScreenshot.png" style="width: 400px; max-width: 600px; flex-grow: 1;" />
-</div>
+&nbsp; &nbsp;运行 `./gradlew run`  (或者 `gradlew.bat run` 在 Windows 上) 启动 MaryTTS 服务器
+&nbsp; &nbsp;然后使用 Web 浏览器访问 http://localhost:59125 
 
-# <a id="quick-start" href="#quick-start">🚀 快速开始</a>
+如果您想在不同的地址和端口上启动 MaryTTS，您可以使用以下选项：
+```sh
+./gradlew run -Dsocket.port=5920 -Dsocket.addr=0.0.0.0 --info
+```
+其中 5920 是新端口，0.0.0.0 是新地址。当地址为0.0.0.0时，所有接口都会被监听。
 
-&nbsp; &nbsp;您需要安装 [Node.js](https://nodejs.org/en/) 和 [Yarn](https://yarnpkg.com/) 
+&nbsp; &nbsp;通过使用选项`--info`, 您可以将 `gradle` *AND* MaryTTS 的记录器设置为 INFO 级别。通过使用 `--debug`, 您可以将级别设置为 DEBUG。
+&nbsp; &nbsp;还可以通过定义系统变量`log4j.logger.marytts`将 MaryTTS记录器级别设置为  `INFO` 或 `DEBUG` 
+## 下载并安装语音
 
-&nbsp; &nbsp;完成后，您可以运行以下命令...
+&nbsp; &nbsp;运行 `./gradlew runInstallerGui` 以启动安装程序 GUI 以下载并安装更多语音。在使用新语音之前，需要重新启动正在运行的 MaryTTS 服务器。
 
-```bash
-git clone https://github.com/Stability-AI/StableStudio.git
+## 创建 MaryTTS
 
-cd StableStudio
+&nbsp; &nbsp;运行 `./gradlew build`.
+&nbsp; &nbsp;这将编译和测试所有模块，并为每个下创建输出 `build/`.
 
-yarn
+&nbsp; &nbsp;请注意，以前，MaryTTS v5.x 是使用 Maven 构建的。请参考[**5.x branch**](https://github.com/marytts/marytts/tree/5.x).
 
-yarn dev
+
+## 包装 MaryTTS
+
+&nbsp; &nbsp;运行 `./gradlew distZip` 或 `./gradlew distTar` 在`build/distributions`下构建分发包
+&nbsp; &nbsp;您还可以通过运行`./gradlew installDist`直接"install"解压后的发行版`build/install`到其中
+
+&nbsp; &nbsp;该发行版包含运行独立的 MaryTTS 服务器实例或下载和安装更多语音所需的所有文件。运行服务器或安装程序 GUI 的脚本可以在发行版的目录`bin/`中找到
+
+
+##  在您自己的 Java 项目中使用 MaryTTS
+
+&nbsp; &nbsp;在您自己的 Java 项目中使用 MaryTTS 的最简单方法是声明对相关 MaryTTS 工件的依赖关系，例如默认的美国英语 HSMM 语音：
+
+
+### Maven
+
+添加到您的`pom.xml`:
+```xml
+<repositories>
+  <repository>
+    <url>https://mlt.jfrog.io/artifactory/mlt-mvn-releases-local</url>
+  </repository>
+</repositories>
+
+<dependencies>
+  <dependency>
+    <groupId>de.dfki.mary</groupId>
+    <artifactId>voice-cmu-slt-hsmm</artifactId>
+    <version>5.2.1</version>
+    <exclusions>
+      <exclusion>
+        <groupId>com.twmacinta</groupId>
+        <artifactId>fast-md5</artifactId>
+      </exclusion>
+      <exclusion>
+         <groupId>gov.nist.math</groupId>
+         <artifactId>Jampack</artifactId>
+      </exclusion>
+    </exclusions>
+  </dependency>
+</dependencies>
 ```
 
-_**就是这样 🎉**_
+### Gradle
 
-&nbsp; &nbsp;默认情况下 StableStudio 将在[localhost:3000](http://localhost:3000) 上运行
+添加到 `build.gradle`:
+```groovy
+repositories {
+   mavenCentral()
 
-&nbsp; &nbsp;您需要准备好[API key](https://platform.stability.ai/docs/getting-started/authentication) 才是使用默认的 [Stability API](https://platform.stability.ai/docs/getting-started) 插件
+   exclusiveContent {
+      forRepository {
+         maven {
+            url 'https://mlt.jfrog.io/artifactory/mlt-mvn-releases-local'
+         }
+      }
+      filter {
+         includeGroup 'de.dfki.lt.jtok'
+      }
+   }
+}
 
-&nbsp; &nbsp;如果您没有,您可以在[DreamStudio](https://dreamstudio.ai)上创建一个账户,并从[account page](https://dreamstudio.ai/account)获取密钥
+dependencies {
+   implementation group: 'de.dfki.mary', name: 'voice-cmu-slt-hsmm', version: '5.2.1', {
+      exclude group: 'com.twmacinta', module: 'fast-md5'
+      exclude group: 'gov.nist.math', module: 'Jampack'
+   }
+}
+```
 
-# <a id="about" href="#about">ℹ️ 关于</a>
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 1em; margin: 0 0 2em 0;">
-  <img src="./misc/PainterWithRobot.png" style="flex-grow: 1; flex-shrink: 1;" />
-</div>
+## 合成语音
 
-&nbsp; &nbsp;StableStudio 是 [Stability AI](https://stability.ai)的 DreamStudio 的官方开源变体, [DreamStudio](https://www.dreamstudio.ai)是我们用于生成AI的用户界面.
-它是一个基于网络的应用程序，允许用户创建和编辑生成的图像。
+&nbsp; &nbsp;此存储库中提出了文本到 wav 的基本示例
+- Maven: https://github.com/marytts/marytts-txt2wav/tree/maven
+- Gradle: https://github.com/marytts/marytts-txt2wav/tree/gradle
 
-&nbsp; &nbsp;我们还不完全确定这个项目的进展情况，但我们很高兴看到社区用它做什么！
 
-# <a id="faq" href="#faq">🙋 FAQ</a>
+## 将 MaryTTS 用于其他编程语言
 
-## StableStudio 和 [DreamStudio](https://dreamstudio.ai) 有什么区别?
+&nbsp; &nbsp;如果您想将MaryTTS用于其他编程语言（例如python），您需要实现3个步骤
 
-&nbsp; &nbsp;不多！为了使该项目对社区更加友好，我们做了一些调整：
+1. 编译 marytts
+2. 启动服务器
+3. 服务器上的查询综合
 
--我们删除了[DreamStudio](https://dreamstudio.ai)特定的品牌
 
--所有“在线”API 调用均已被[插件系统](./packages/stablestudio-plugin/README.md)取代,该系统允许您轻松更换后段
+### 使用服务器合成语音
 
-  - 在发布时，我们只会为 Stability API 提供一个插件，但使用一点 TypeScript，您就可以[创建自己的](./packages/stablestudio-plugin/README.md).
+&nbsp; &nbsp;使用服务器合成语音非常容易。您需要生成正确的 HTTP 查询并处理关联的 HTTP 响应。建议举例：
+- python 3: https://github.com/marytts/marytts-txt2wav/tree/python
+- shell: https://github.com/marytts/marytts-txt2wav/tree/sh
 
-- 我们删除了特定于稳定性的帐户功能，例如计费、API 密钥管理等。
+## 额外文档
 
-  - 这些功能仍然可以在[DreamStudio's account page](https://dreamstudio.ai/account)上使用
+### 服务器即服务（Linux 特定）
 
-## [DreamStudio](https://dreamstudio.ai) 还会支持吗?
+&nbsp; &nbsp;[这里](./src/main/dist/misc/marytts.server)提出了如何将 marytts 服务器定义为服务的示例。
 
-_是的！Stability 的 StableStudio 托管部署仍将是[DreamStudio](https://dreamstudio.ai).
 
-&nbsp; &nbsp;它将继续获取更新，并尽可能与 StableStudio 保持同步。
+### 用户词典
 
-# <a id="contributing" href="#contributing">🧑‍💻 贡献</a>
+&nbsp; &nbsp;您可以通过添加用户词典来扩展词典。有关如何执行此操作的文档位于[此处](./src/main/dist/user-dictionaries/README.md).
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 1em; margin: 0 0 2em 0;">
-  <img src="./misc/ProgrammingRobots.png" style="flex-grow: 1; flex-shrink: 1;" />
-</div>
+## 贡献
 
-_**鼓励社区贡献!**_
+&nbsp; &nbsp;为 MaryTTS 源代码做出贡献的推荐工作流程是遵循 GitHub 模型：
 
-_**UI包的[README](./packages/stablestudio-ui/README.md)是一个很好的开始**_
+1. 通过导航到 https://github.com/marytts/marytts 并单击“fork” ，将 MaryTTS 存储库分叉到您自己的 GitHub 个人资料中（当然您需要一个 GitHub 帐户）;
 
-&nbsp; &nbsp;错误修复、文档、常规清理、新功能等都是受欢迎的。
+2. 使用 `git clone`, `commit`, 和 `push` 命令对您自己的 marytts 存储库进行修改；在此过程中,请确保`git pull upstream master` 定期与主存储库的最新进展保持同步；
 
-&nbsp; &nbsp;这里有一些有用的链接...
-- [讨论](https://github.com/Stability-AI/StableStudio/discussions)
-- [开放式问题](https://github.com/Stability-AI/StableStudio/issues)
-- [打开拉去请求](https://github.com/Stability-AI/StableStudio/pulls)
-- [行为准则](./CODE_OF_CONDUCT.md)
+3. 当您认为可重用的贡献已准备就绪时，请在 GitHub 上打开“拉取请求”，以便轻松合并到主存储库中。
+
+请查看[GitHub 文档](http://help.github.com/) 以获取更多详细信息。
+
+### IDE 配置
+
+&nbsp; &nbsp;Wiki 页面可帮助您配置 IDE 来开发 MaryTTS。以下 IDE 已经过测试和记录：
+
+- 智能 IDEA
+- Eclipse: https://github.com/marytts/marytts/wiki/Eclipse
