@@ -1,6 +1,7 @@
 ---
 name: Inpainter
-description: 用于使用 Replicate API 通过稳定扩散进行修复的 Web GUI。
+description: A web GUI for inpainting with Stable Diffusion using the Replicate API.
+author:
   name: zeke
   avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
 contributors:
