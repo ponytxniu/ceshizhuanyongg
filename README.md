@@ -1,105 +1,205 @@
 ---
-name: Chainlit
+name: Flowise
 description: >-
-  Chainlit 可让您在几分钟之内⚡️就在任何Python代码上创建类似于ChatGPT的UI!一些关键功能包括中间步骤的可视化，元素的管理和现实（图像，文本，轮播等）以及云部署。
-
+  拖放 UI 以使用 LangchainJS 构建您的定制 LLM 流程
 author:
-  name: Chainlit
-  avatar: https://avatars.githubusercontent.com/u/128686189?s=64&v=4
+  name: FlowiseAI
+  avatar: https://avatars.githubusercontent.com/u/128289781?s=88&v=4
 contributors: 
-  - name: willydouhard
-    avatar: https://avatars.githubusercontent.com/u/13104895?s=64&v=4
-  - name: constantinidan  
-    avatar: https://avatars.githubusercontent.com/u/16107237?s=64&v=4
+  - name: HenryHengZJ
+    avatar: https://avatars.githubusercontent.com/u/26460777?s=64&v=4
+  - name: chungyau97
+    avatar: https://avatars.githubusercontent.com/u/33013947?s=64&v=4
+  - name: neerajkrbansal1996
+    avatar: https://avatars.githubusercontent.com/u/22657452?s=64&v=4
+  - name: princepride
+    avatar: https://avatars.githubusercontent.com/u/29850264?s=64&v=4
+  - name: vjsai
+    avatar: https://avatars.githubusercontent.com/u/405556?s=64&v=4
+  - name: mileszim
+    avatar: https://avatars.githubusercontent.com/u/1849508?s=64&v=4
+  - name: eltociear
+    avatar: https://avatars.githubusercontent.com/u/22633385?s=64&v=4
+  - name: kushu7
+    avatar: https://avatars.githubusercontent.com/u/31707153?s=64&v=4
+  - name: siddiqss
+    avatar: https://avatars.githubusercontent.com/u/34280880?s=64&v=4
+  - name: xianjianlf2
+    avatar: https://avatars.githubusercontent.com/u/53885024?s=64&v=4
 language:
+  - language: JavaScript
+    percentage: 50.1
   - language: TypeScript
-    percentage: 58.0
-  - language: Python
-    percentage: 41.5
-star: '574'
-fork: '201'
-url: https://github.com/cloudstudio-platform/chainlit
-banner: ./images/quick-start.png
+    percentage: 46.8
+  - language: CSS
+    percentage: 1.6
+  - language: SCSS
+    percentage: 0.9
+  - language: HTML
+    percentage: 0.5
+  - language: Dockerfile
+    percentage: 0.1
+star: '6.3k'
+fork: '1.5k'
+url: https://github.com/FlowiseAI/Flowise
+banner: ./flowise.gif
 icon: https://cs-res.codehub.cn/vscode/node.svg
-video: ./images/Chainlit.mov
-license: Apache-2.0
-order: 18
+video: ./Flowise.mov
+license: MIT
+order: 16
 ---
 
-  # 欢迎来到 Chainlit 👋
+# Flowise - LangchainJS UI
 
-  &nbsp; &nbsp; **在几分钟内构建python LLM 应用程序 ⚡️**
+<a href="https://github.com/FlowiseAI/Flowise">
+<img width="100%" src="https://github.com/FlowiseAI/Flowise/blob/main/images/flowise.gif?raw=true"></a>
 
-  &nbsp; &nbsp; Chainlit 可让您在几分钟之内就在任何Python代码上创建类似于ChatGPT的UI!一些关键功能包括中间步骤的可视化，元素的管理和现实（图像，文本，轮播等）以及云部署
+拖动UI以使用[LangchainJS](https://github.com/hwchase17/langchainjs)构建您的定制LLM流程
 
-  [![](https://dcbadge.vercel.app/api/server/ZThrUxbAYw?style=flat)](https://discord.gg/ZThrUxbAYw)
-  [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/chainlit_io.svg?style=social&label=Follow%20%40chainlit_io)](https://twitter.com/chainlit_io)
-  [![CI](https://github.com/Chainlit/chainlit/actions/workflows/ci.yaml/badge.svg)](https://github.com/Chainlit/chainlit/actions/workflows/ci.yaml)
+## ⚡快速开始
 
-  ## 安装
+1. 安装 Flowise
+    ```bash
+    npm install -g flowise
+    ```
+2. 开始 Flowise
 
-  &nbsp; &nbsp; 打开终端并运行:
+    ```bash
+    npx flowise start
+    ```
 
-  ```bash
-  $ pip install chainlit
-  $ chainlit hello
-  ```
+    有用户名和密码
 
-  &nbsp; &nbsp; 如果 `hello app`现在在您的浏览器中是打开的状态，则表示您已准备就绪!
+    ```bash
+    npx flowise start --FLOWISE_USERNAME=user --FLOWISE_PASSWORD=1234
+    ```
 
-  ## 📖 文档
+3. 打开 [http://localhost:3000](http://localhost:3000)
 
-  &nbsp; &nbsp; 请参阅[此处](https://docs.chainlit.io) 以获取有关一下内容的完整文档:
+## 🐳 Docker
 
-  - 入门（安装，简单示例）
-  - 例子
-  - 参考（完整的API文档）
+### Docker 组合
 
-  ## 🚀 快速开始
+1. 转到 `docker` 项目根目录下的文件夹
+2. 创建 `.env` 文件并指定 `PORT` (参考 `.env.example`)
+3. `docker-compose up -d`
+4. 打开[http://localhost:3000](http://localhost:3000)
+5. 您可以通过以下方式将容器放下`docker-compose stop`
 
-  ### 🐍 python代码
+### Docker 镜像
 
-  &nbsp; &nbsp; 使用以下代码 `demo.py` 创建一个新文件:
-  ```python
-  import chainlit as cl
+1. 本地构建镜像:
+    ```bash
+    docker build --no-cache -t flowise .
+    ```
+2. 运行:
 
+    ```bash
+    docker run -d --name flowise -p 3000:3000 flowise
+    ```
 
-  @cl.on_message  # this function will be called every time a user inputs a message in the UI
-  def main(message: str):
-      # this is an intermediate step
-      cl.Message(author="Tool 1", content=f"Response from tool1", indent=1).send()
+3. 停止:
+    ```bash
+    docker stop flowise
+    ```
 
-      # send back the final answer
-      cl.Message(content=f"This is the final answer").send()
-  ```
+## 👨‍💻 开发
 
-  &nbsp; &nbsp; 现在您就可以运行它了！
-  ```
-  $ chainlit run demo.py -w
-  ```
+Flowise 在一个单一存储库中有 3 个不同的模块。
 
+-   `server`: 服务API逻辑的节点后端
+-   `ui`: 反应前端
+-   `components`: Langchain组件
 
-  <img src="./images/quick-start.png" alt="Quick Start"></img>
+### 先决条件
 
+-   安装 Yarn
+    ```bash
+    npm i -g yarn
+    ```
 
-  ### 🔗 和 LangChain
+### 设置
 
-  &nbsp; &nbsp; 查看我们与LangChain的即插即用[集成](https://docs.chainlit.io/langchain)
+1. 克隆存储库
 
-  ## 🛣 路线图
-  - [ ] 新的UI元素（电子表格，视频，轮播）
-  - [ ] 通过组件的框架来创建您自己的UI元素
-  - [ ] 基于DAG的思想链接口
-  - [ ] 在提示场景中支持更多的 LLMs 
-  - [ ] 应用程序部署
+    ```bash
+    git clone https://github.com/FlowiseAI/Flowise.git
+    ```
 
-  &nbsp; &nbsp; 使用 Github issues or on [Discord](https://discord.gg/ZThrUxbAYw)告诉我们您希望在Chainlit中添加哪些内容.
+2. 进入存储库文件夹
 
-  ## 💁 贡献
+    ```bash
+    cd Flowise
+    ```
 
-  &nbsp; &nbsp; 作为快速发展领域中的一项开源计划，我们欢迎您的贡献，无论是通过添加新的功能还是改进文档。
+3. 安装所有模块的所有 dependencies:
 
-  &nbsp; &nbsp; 有关如何贡献的详细信息，请参阅[此处](.github/CONTRIBUTING.md).
+    ```bash
+    yarn install
+    ```
 
-  ## 许可
-  &nbsp; &nbsp; Chainlit 是开源的，并根据[Apache 2.0](LICENSE)许可证获得许可
+4. 构建所有代码：
+
+    ```bash
+    yarn build
+    ```
+
+5. 启动应用程序：
+
+    ```bash
+    yarn start
+    ```
+
+    您可以通过[http://localhost:3000](http://localhost:3000)访问该app
+
+6. 对于 development build:
+
+    ```bash
+    yarn dev
+    ```
+
+    任何代码更改都会在[http://localhost:8080](http://localhost:8080)上自动重新加载应用程序
+
+## 🔒 验证
+
+要启用应用程序级别身份验证，请将 `FLOWISE_USERNAME` 和添加 `FLOWISE_PASSWORD` 到 `packages/server` 位置下的 `.env`:
+
+```
+FLOWISE_USERNAME=user
+FLOWISE_PASSWORD=1234
+```
+
+## 📖 文档
+
+[Flowise Docs](https://docs.flowiseai.com/)
+
+## 🌐 自托管
+
+### [Railway](https://docs.flowiseai.com/deployment/railway)
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/YK7J0v)
+
+### [Render](https://docs.flowiseai.com/deployment/render)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://docs.flowiseai.com/deployment/render)
+
+### [AWS](https://docs.flowiseai.com/deployment/aws)
+
+### [DigitalOcean](https://docs.flowiseai.com/deployment/digital-ocean)
+
+## 💻 云托管
+
+即将推出
+
+## 🙋 支持
+
+欢迎在[讨论](https://github.com/FlowiseAI/Flowise/discussions)中提出任何问题并请求新功能
+
+## 🙌 贡献
+
+请参阅[贡献指南](CONTRIBUTING.md),如果您又任何的疑问或者问题,请通过[Discord](https://discord.gg/jbaHfsRVBW)联系我们
+[![Star History Chart](https://api.star-history.com/svg?repos=FlowiseAI/Flowise&type=Timeline)](https://star-history.com/#FlowiseAI/Flowise&Date)
+
+## 📄 许可
+
+该存储库中的源代码根据[MIT License](LICENSE.md)提供
