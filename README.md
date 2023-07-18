@@ -1,164 +1,147 @@
 ---
-name: Dify
+name: PromptAppGPT
 description: >-
-  Dify 是一个易于使用的 LLMOps 平台，旨在帮助更多人创建可持续的 AI 原生应用程序。通过针对各种应用程序类型的可视化编排，Dify 提供开箱即用的即用型应用程序，这些应用程序也可以用作后端即服务 API。使用一个用于插件和数据集集成的 API 来统一您的开发流程，并使用单一界面简化您的操作，以实现快速工程、可视化分析和持续改进。
+ PromptAppGPT 是一个基于低代码提示的快速应用程序开发框架。PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像生成、在线提示编辑器+编译器+运行器、自动用户界面生成、支持插件扩展等功能。PromptAppGPT旨在启用自然语言应用程序基于GPT的开发。
 author:
-  name: LangGenius
-  avatar: https://avatars.githubusercontent.com/u/127165244?s=88&v=4
-contributors:
-  - name: takatost
-    avatar: https://avatars.githubusercontent.com/u/5485478?s=64&v=4
-  - name: goocarlos
-    avatar: https://avatars.githubusercontent.com/u/892886?s=64&v=4
-  - name: iamjoel
-    avatar: https://avatars.githubusercontent.com/u/2120155?s=64&v=4
-  - name: Panmuse
-    avatar: https://avatars.githubusercontent.com/u/4189790?s=64&v=4
-  - name: crazywoola
-    avatar: https://avatars.githubusercontent.com/u/100913391?s=64&v=4
-  - name: killpanda
-    avatar: https://avatars.githubusercontent.com/u/217538?s=64&v=4
-  - name: zxhlyh
-    avatar: https://avatars.githubusercontent.com/u/16177003?s=64&v=4
-  - name: GarfieldLucy
-    avatar: https://avatars.githubusercontent.com/u/10388720?s=64&v=4
-  - name: eltociear
-    avatar: https://avatars.githubusercontent.com/u/22633385?s=64&v=4
-  - name: yuhao1118
-    avatar: https://avatars.githubusercontent.com/u/26663836?s=64&v=4
-  - name: ares0x
-    avatar: https://avatars.githubusercontent.com/u/53114112?s=64&v=4
+  name: mleoking
+  avatar: https://avatars.githubusercontent.com/u/5763751?s=96&v=4
+contributors: []
 language:
-  - language: TypeScript
-    percentage: 51
-  - language: Python
-    percentage: 42.9
-  - language: CSS
-    percentage: 3.3
-  - language: SCSS
-    percentage: 1.2
   - language: JavaScript
-    percentage: 1.1
-  - language: PHP
-    percentage: 0.2
-star: 3k
-fork: '396'
-url: https://github.com/langgenius/dify
-banner: ./describe-en.png
+    percentage: 95.5
+  - language: HTML
+    percentage: 2.8
+  - language: CSS
+    percentage: 1.7
+star: 235
+fork: 45
+url: https://github.com/mleoking/PromptAppGPT
+banner: ./images/pag-image-creator-edit.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
+video: ./promptappgpt.mov
 license: MIT
-order: 15
+order: 20
 ---
 
-![](./images/describe-en.png)
-<p align="center">
-  <a href="./README.md">English</a> |
-  <a href="./README_CN.md">简体中文</a> |
-  <a href="./README_JA.md">日本語</a>
-</p>
+# 💡 PromptAppGPT
+&nbsp; &nbsp;PromptAppGPT 是一个基于低代码提示的快速应用程序开发框架。PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像生成、在线提示编辑器+编译器+运行器、自动用户界面生成、支持插件扩展等功能。PromptAppGPT旨在启用自然语言应用程序基于GPT的开发。
 
-[Website](https://dify.ai) • [Docs](https://docs.dify.ai) • [Twitter](https://twitter.com/dify_ai) • [Discord](https://discord.gg/FngNHpbcY7)
+**PromptAppGPT 显着降低了 GPT 应用程序开发的门槛，让任何人都可以用几行低代码开发类似 AutoGPT 的应用程序**
 
-**Dify** 是一个易于使用的 LLMOps 平台，旨在帮助更多人创建可持续的 AI 原生应用程序。通过针对各种应用程序类型的可视化编排，Dify 提供开箱即用的即用型应用程序，这些应用程序也可以用作后端即服务 API。使用一个用于插件和数据集集成的 API 来统一您的开发流程，并使用单一界面简化您的操作，以实现快速工程、可视化分析和持续改进。
+&nbsp; &nbsp;请参阅示例应用程序：[Imaginative Image Creator, Web & Image Searcher, My AutoGPT, ...](PagApps.md)
 
-&nbsp; &nbsp;使用 Dify 创建的应用程序包括：
+![PromptAppGPT](images/pag-image-creator-edit.png)
 
-&nbsp; &nbsp;支持表单模式和聊天对话模式的开箱即用网站 包含插件功能、上下文增强等的单一 API，节省您后端编码工作 可视化数据分析、日志审查和应用程序注释 Dify 与 Langchain 兼容，这意味着我们将逐步支持多个 LLM，目前支持：
+## 🛠️ 特征
+
+- ⚡ 基于低代码提示的快速应用程序开发
+- 🧠 用于文本生成的 GPT3/4 执行器
+- 🍯 用于图像生成的 Dalle 执行器
+- 🔌 执行器（插件）的可扩展性
+- #️⃣ 在线提示编辑器、编译器和运行器
+- ⚙️ 自动生成用户界面
+- 🧨 中英文用户界面
+
+## 🚀 快速开始
+
+1. 获取 OpenAI[API Key](https://platform.openai.com/account/api-keys).
+2. 访问网站[PromptAppGPT Web Home](http://promptappgpt.wangzhishi.net)或下载[Windows 10+ APP](dist/pag.exe).
+3. 设置 OpenAI 密钥/OpenAI Api 代理/OpenAI Gpt 模型。
+- OpenAI Key：从OpenAI获取的api密钥。
+- OpenAI Api Proxy：openai api的代理，如果您可以直接访问openai api，则代理为`https://api.openai.com/`, 否则代理应该是另一个 (e.g. `https://api.openai-proxy.com/`) 可以将您的请求代理到openai api的网站
+- OpenAI Gpt 模型: gpt-4/gpt-3.5-turbo
+
+![Set the OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model](images/pag-settings-note.png)
+
+4. 选择并运行应用程序。
+
+![Select and run a app](images/pag-image-creator-run1-note.png)
+![Select and run a app](images/pag-image-creator-run2-note.png)
+![Select and run a app](images/pag-image-creator-run3-note.png)
+
+5. 编辑并编译应用程序。
+
+![Edit and compile the app](images/pag-image-creator-edit-note.png)
 
 
-- GPT 3 (text-davinci-003)
-- GPT 3.5 Turbo(ChatGPT)
-- GPT-4
+## ⌨️ 发展
 
-## 使用云服务
+&nbsp; &nbsp;PromptAppGPT 的代码基于 YAML 格式。要基本了解 YAML 格式，您可以参考[YAML cheatsheet](https://quickref.me/yaml).
 
-&nbsp; &nbsp;访问[Dify.ai](https://dify.ai)
+&nbsp; &nbsp;我们通过以下程序来说明如何在PromptAppGPT中进行应用程序开发。
 
-## 安装社区版
+``` yaml
+---
+author: Leo
+name: Imaginative Image Creator
+description: Create imaginative images from any language with GPT and DALL·E
+gptRound: single
+failedRetries: 2
 
-### 系统要求
+sysTask:
+  - executor: gpt
+    prompt: You are an imaginative image creator. 
 
-&nbsp; &nbsp;在安装 Dify 之前，请确保您的计算机满足以下最低系统要求：
+userTask: 
+  - trigger: dalle_prompt=
+    executor: dalle
+    prompt: |
+      prompt: $i{Word to draw:@textarea=$e{=(.*)}}
+      n: $i{Num of images:@select#1/2/3/4=1}
+      size: $i{Size of images:@select#256x256/512x512/1024x1024=512x512}
+    outputer: dalle output $e{.*}
+  - executor: gpt
+    prompt: | 
+      Generate a detailed Dall-E prompt with several adjectives for the following text:
+      ```$i{Text to draw:@input}'''
+    outputer: dalle_prompt=$e{.*} 
+    validator: .{15,}
 
-- CPU >= 1 Core
-- 内存 >= 4GB
-
-### 快速开始
-
-&nbsp; &nbsp;启动 Dify 服务器的最简单方法是运行我们的[docker-compose.yml](docker/docker-compose.yaml) 文件 在运行安装命令之前，请确保您的计算机上已安装[Docker](https://docs.docker.com/get-docker/) 和 [Docker Compose](https://docs.docker.com/compose/install/) :
-
-```bash
-cd docker
-docker-compose up -d
+extra: 
 ```
+**author**部分是作者姓名;**name** 是应用程序的名称；**description**部分是应用程序的描述；**gptRound** 部分确定是否将 gpt 用于 (`single`) 或者 multi-round (`multiple`)对话, 对于大多数应用程序，该值应为 `single`; **failedRetries** 部分设置失败或输出无效时重试的次数。
 
-&nbsp; &nbsp;运行后，您可以在浏览器中通过[http://localhost/install](http://localhost/install) 访问Dify仪表板并开始初始化安装过程。
+**sysTask** 部分是由 `-` 分隔的任务集合，,设置gpt的行为,对于许多应用程序，此字段可以留空。当此部分不为空时，每个任务必须定义 `prompt` 和 `executor` 属性
 
+- `executor` 是任务的执行者。
+- `prompt` 是输入执行器的文本。
 
-### 配置
+**userTask** 部分包含由  `-` 分隔的用户定义的任务. 每个任务必须定义`prompt` 和 `executor`属性, 并且`trigger`, `outputer` 和 `validator`是可选的. 应用程序以有序的方式循环执行用户任务，使用前一个任务的输出来匹配每个任务的，第一个通过匹配的任务是当前正在运行的任务。第一次运行时应用程序的输出为空。没有属性的任务可以匹配任何输出，并且这些任务应该放置在用户任务的末尾，以允许首先触发具有更明确条件的任务。
 
-&nbsp; &nbsp;如果您需要自定义配置，请参考我们的[docker-compose.yml](docker/docker-compose.yaml)文件中的注释并手动设置环境配置。进行更改后，请再次运行'docker-compose up -d' 
+- `trigger` 是任务的触发器，它是一个正则表达式。当任务的触发器与前一个任务的输出匹配时，任务就会运行。这是[正则表达式备忘单](https://quickref.me/regex).
+- `executor` 是任务的执行者。目前支持 `gpt`, `dalle`, `bingWeb`, `bingImage`, `webFetch`, `javaScript`, 和 `log` 的执行者
+- `prompt`是输入执行器的文本。其中 `prompt`, `$i{xxx}` 是用户输入，是从先前 `$e{xxx}` 任务输出中提取文本的提取器。
+- `outputer` 是用于后处理此任务的输出的文本。是从此 `$e{xxx}` 任务的输出中提取文本的提取器。
+- `validator` 是用于验证此任务的输出的正则表达式。如果其输出与正则表达式不匹配，应用程序将停止在当前任务处`validator` 。例如`validator: .{15,}` 检查任务输出的长度是否大于或等于15。
 
-## 路线图
+&nbsp; &nbsp;应用程序用户界面的输入是e `$i{xxx}`根据`prompt`.表达式的格式 `$i{xxx}` 为 `$i{input label@input type#select options=default value}`. 目前支持三种类型的输入： `select`, `input`, and `textarea`. 输入的选项 `select` input 以`/`为分隔
 
-&nbsp; &nbsp;正在开发的功能：
+&nbsp; &nbsp;表达式是从上一个此`$e{xxx}` 任务的输出中提取文本的提取器。表达式的格式为 `$e{xxx}` expression is `$e{regular expression}`如果正则表达式中存在组构造，则仅提取与该组匹配的文本，否则提取与整个正则表达式匹配的文本。
 
-- **数据集**,支持更多的数据集，例如同步Notion或网页的内容我们将支持更多的数据集，包括文本、网页，甚至Notion内容。用户可以根据自己的数据源构建AI应用。
-- **插件**, 为应用程序引入 ChatGPT Plugin 标准的插件，或者使用 Dify 生产的插件 我们将发布符合 ChatGPT 标准的插件，或者 Dify 自己的插件，以在应用程序中启用更多功能。
-- **开源模型**, 例如采用Llama作为模型提供者或进一步微调我们将与Llama这样的优秀开源模型合作，将它们作为我们平台中的模型选项提供，或使用它们进行进一步微调。
+&nbsp; &nbsp;额外部分可以为空，并且当前未启用。
 
-## 问答
+## ❤️ 贡献者
 
-**问：我可以用 Dify 做什么？**
+![Contributors](https://contrib.rocks/image?repo=mleoking/PromptAppGPT)
 
-&nbsp; &nbsp;答：Dify 是一款简单但功能强大的 LLM 开发和运营工具。您可以使用它来构建商业级应用程序、个人助理。如果您想开发自己的应用程序，LangDifyGenius可以为您节省与OpenAI集成的后端工作，并提供可视化操作功能，让您不断改进和训练您的GPT模型。
+## 🙋 常见问题解答
 
-**问：如何使用 Dify 来“训练”我自己的模型？**
+### 无法获取错误
 
-&nbsp; &nbsp;答：一个有价值的应用程序包括即时工程、上下文增强和微调。我们创建了一种将提示与编程语言（类似于模板引擎）相结合的混合编程方法，可以轻松完成长文本嵌入或从用户输入的 Youtube 视频中捕获字幕 - 所有这些都将作为上下文提交待处理的法学硕士。我们非常注重应用的可操作性，用户在使用App过程中产生的数据可用于分析、标注和持续训练。如果没有合适的工具，这些步骤可能会非常耗时。
+&nbsp; &nbsp;检查您是否可以访问互联网并正确设置 OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model。
 
-**问：如果我想创建自己的应用程序，我需要准备什么？**
+### 网络安全错误
 
-&nbsp; &nbsp;答：我们假设您已经拥有 OpenAI API 密钥；如果没有，请注册一个。如果您已经有一些可以作为培训背景的内容，那就太好了！
+&nbsp; &nbsp;当 PromptAppGPT 从网站启动时，浏览器安全检查会阻止对 openai api 的请求。您可以按照以下步骤解锁 PromptAppGPT 网站。
 
-**问：有哪些界面语言可用？**
+**对于 Windows Chrome 用户：**
+1. 右键桌面，添加新快捷方式
+2. 将目标添加为“[PATH_TO_CHROME]\chrome.exe” --disable-web-security --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
+3. 单击 OK.
 
-&nbsp; &nbsp;答：目前支持英文和中文，您可以向我们贡献语言包。
+**对于 Mac Chrome 用户：**
+1. 打开 -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
 
-## Star 历史
+**对于 Linux Chrome 用户：**
+1. google-chrome --disable-web-security -–allow-file-access-from-files
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langgenius/dify&type=Date)](https://star-history.com/#langgenius/dify&Date)
-
-## 联系我们
-
-&nbsp; &nbsp;如果您有任何疑问、建议或合作咨询，请随时通过以下渠道与我们联系：
-
-- 在我们的 GitHub 存储库上提交问题或 PR
-- 加入我们的[Discord](https://discord.gg/FngNHpbcY7)社区中的讨论
-- 发送电子邮件至 hello@dify.ai
-
-&nbsp; &nbsp;我们渴望帮助您，共同创建更多有趣、有用的人工智能应用！
-
-## 贡献
-
-&nbsp; &nbsp;为了确保正确的审查，所有代码贡献 - 包括来自具有直接提交访问权限的贡献者的代码 - 必须通过拉取请求提交并在合并之前得到核心开发团队的批准。
-
-
-&nbsp; &nbsp;我们欢迎所有拉取请求！如果您想提供帮助，请查看[贡献指南](CONTRIBUTING.md)以获取有关如何开始的更多信息。
-
-## 安全
-
-&nbsp; &nbsp;为了保护您的隐私，请避免在 GitHub 上发布安全问题。相反，请将您的问题发送至 security@dify,我们将为您提供更详细的答案。
-
-## 引文
-
-&nbsp; &nbsp;本软件使用以下开源软件：
-
-- Chase, H. (2022). LangChain [Computer software]. https://github.com/hwchase17/langchain
-- Liu, J. (2022). LlamaIndex [Computer software]. doi: 10.5281/zenodo.1234.
-
-&nbsp; &nbsp;欲了解更多信息，请参阅相应软件的官方网站或许可文本。
-
-## 许可
-
-&nbsp; &nbsp;该存储库可在 [Dify Open Source License](LICENSE) 下使用
