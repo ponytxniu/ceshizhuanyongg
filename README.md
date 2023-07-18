@@ -1,70 +1,52 @@
 ---
-name: Paint by Text
-description: 通过与生成式 AI 模型聊天来修改图像。
+name: Javascript AI Rock Paper Scissors
 author:
-  name: replicate
-  avatar: https://avatars.githubusercontent.com/u/60410876?s=88&v=4
-contributors:
-  - name: zeke
-    avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
-  - name: erbridge
-    avatar: https://avatars.githubusercontent.com/u/1027364?s=64&v=4
-  - name: bfirsh
-    avatar: https://avatars.githubusercontent.com/u/40906?s=64&v=4
-  - name: mattt
-    avatar: https://avatars.githubusercontent.com/u/7659?s=64&v=4
-  - name: steven-tey
-    avatar: https://avatars.githubusercontent.com/u/28986134?s=64&v=4
+  name: ozboware
+  avatar: https://avatars.githubusercontent.com/u/95859352?s=96&v=4
+description: >-
+  A rock, paper, scissors game using artificial intelligence as the computer
+  player. The program will remember patterns and make moves based on your
+  historical moves
+contributors: []
 language:
-  - language: JavaScript
-    percentage: 96.1
+  - language: Javascript
+    percentage: 98.9
   - language: CSS
-    percentage: 3.5
-  - language: Shell
-    percentage: 0.4
-star: '276'
-fork: '46'
-url: https://github.com/replicate/paint-by-text
-banner: ./215248708-80787623-fff4-4b22-a548-e5c46b055244.png
+    percentage: 1.1
+star: '10'
+fork: '0'
+url: https://github.com/ozboware/Javascript-AI-Rock-Paper-Scissors
+banner: ./223067524-cfb54c8f-9bf1-442f-8022-7cf13b766745.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
-video: ./paint-by-text.mov
-license: MIT
-order: 6
+video: ./Rock-Paper-Scissors.mov
+license: GPL-3.0
+order: 8
 ---
 
-# 👩‍🎨 按文本绘画
+# Javascript AI Rock Paper Scissors
 
-&nbsp; &nbsp;通过与生成式 AI 模型聊天来修改图像。
+## 演示
 
-&nbsp; &nbsp;在[paintbytext.chat](http://paintbytext.chat)上尝试一下
+&nbsp; &nbsp;该游戏可以在 GitHub 上玩，[点击这里](https://ozboware.github.io/Javascript-AI-Rock-Paper-Scissors/)
 
-## 怎么运行的
+## 安装
 
-&nbsp; &nbsp;该 app 由以下成员提供支持：
+**无需安装**
 
-🚀 [Replicate](https://replicate.com/?utm_source=project&utm_campaign=paintbytext), 一个在云中运行机器学习模型的平台。
+&nbsp; &nbsp;只需在浏览器中打开索引文件即可播放。
 
-🎨 [InstructPix2Pix](https://replicate.com/timothybrooks/instruct-pix2pix?utm_source=project&utm_campaign=paintbytext), 一种从文本生成图像的开源机器学习模型。
+## 控制
 
-▲ [Vercel](https://vercel.com/), 一个运行网络应用程序的平台。
+&nbsp; &nbsp;单击您的选择并等待计算机轮流进行。我放慢了玩家和计算机选择之间的时间来稍微延长游戏时间，但通过修改 app.js 脚本中的超时，您可以控制游戏之间的时间长度。
 
-⚡️ Next.js [server-side API routes](pages/api), 用于与复制 API 对话。
-👀 Next.js React components, 用于浏览器 UI。
+&nbsp; &nbsp;人工智能会记住模式并根据您的历史动作采取行动。
 
-🍃 [Tailwind CSS](https://tailwindcss.com/), 用于样式。
+&nbsp; &nbsp;使用[brain.js](https://brain.js.org/)为AI创建
+
+## 截图
 
 
-## Development
+![Javascript AI Rock Paper Scissors screenshot 1](https://user-images.githubusercontent.com/95859352/223067524-cfb54c8f-9bf1-442f-8022-7cf13b766745.png)
+![Javascript AI Rock Paper Scissors screenshot 2](https://user-images.githubusercontent.com/95859352/223067551-d6d6fc2c-6fba-4d6c-9c1e-9be0433758fb.png)
+![Javascript AI Rock Paper Scissors screenshot 3](https://user-images.githubusercontent.com/95859352/223067561-a569f858-7413-4038-aaa7-6d5a09e9272e.png)
 
-1. 安装最新版本的[Node.js](https://nodejs.org/)
-1. 复制您的[Replicate API token](https://replicate.com/account?utm_source=project&utm_campaign=paintbytext) 并将其设置在您的环境中：
-    ```
-    echo "REPLICATE_API_TOKEN=<your-token-here>" > .env.local
-    ````
-1. 安装依赖项并运行服务器：
-    ```
-    npm install
-    npm run dev
-    ```
-1. 在浏览器中打开[localhost:3000](http://localhost:3000) 就是这样！
-   
