@@ -114,7 +114,7 @@ extra:
 - `outputer` 是用于后处理此任务的输出的文本。是从此 `$e{xxx}` 任务的输出中提取文本的提取器。
 - `validator` 是用于验证此任务的输出的正则表达式。如果其输出与正则表达式不匹配，应用程序将停止在当前任务处`validator` 。例如`validator: .{15,}` 检查任务输出的长度是否大于或等于15。
 
-&nbsp; &nbsp;应用程序用户界面的输入是e `$i{xxx}`根据`prompt`.表达式的格式 `$i{xxx}` 为 `$i{input label@input type#select options=default value}`. 目前支持三种类型的输入： `select`, `input`, and `textarea`. 输入的选项 `select` input 以`/`为分隔
+&nbsp; &nbsp;应用程序用户界面的输入是 `$i{xxx}`根据`prompt`.表达式的格式 `$i{xxx}` 为 `$i{input label@input type#select options=default value}`. 目前支持三种类型的输入： `select`, `input`, and `textarea`. 输入的选项 `select` input 以`/`为分隔
 
 &nbsp; &nbsp;表达式是从上一个此`$e{xxx}` 任务的输出中提取文本的提取器。表达式的格式为 `$e{xxx}` expression is `$e{regular expression}`如果正则表达式中存在组构造，则仅提取与该组匹配的文本，否则提取与整个正则表达式匹配的文本。
 
