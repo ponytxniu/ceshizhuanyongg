@@ -1,6 +1,6 @@
 ---
 name: Inpainter
-description: A web GUI for inpainting with Stable Diffusion using the Replicate API.
+description: 用于使用 Replicate API 通过稳定扩散进行修复的 Web GUI。
 author:
   name: zeke
   avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
@@ -31,7 +31,7 @@ order: 7
 &nbsp; &nbsp;用于使用 Replicate API通过[Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion)进行修复的 Web GUI 。
 &nbsp; &nbsp;在[inpainter.vercel.app](https://inpainter.vercel.app/)上尝试一下
 
-&nbsp; &nbsp;https://user-images.githubusercontent.com/2289/188992670-3dc9db47-fb8e-45c1-85ee-afc850009c48.mp4
+https://user-images.githubusercontent.com/2289/188992670-3dc9db47-fb8e-45c1-85ee-afc850009c48.mp4
 
 ## 如何运行的
 
