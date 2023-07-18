@@ -1,69 +1,70 @@
 ---
-name: Inpainter
-description: 用于使用 Replicate API 通过稳定扩散进行修复的 Web GUI。
+name: Paint by Text
+description: 通过与生成式 AI 模型聊天来修改图像。
 author:
-  name: zeke
-  avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
+  name: replicate
+  avatar: https://avatars.githubusercontent.com/u/60410876?s=88&v=4
 contributors:
   - name: zeke
     avatar: https://avatars.githubusercontent.com/u/2289?s=64&v=4
+  - name: erbridge
+    avatar: https://avatars.githubusercontent.com/u/1027364?s=64&v=4
   - name: bfirsh
     avatar: https://avatars.githubusercontent.com/u/40906?s=64&v=4
-  - name: ParentZap
-    avatar: https://avatars.githubusercontent.com/u/63628065?s=64&v=4
+  - name: mattt
+    avatar: https://avatars.githubusercontent.com/u/7659?s=64&v=4
+  - name: steven-tey
+    avatar: https://avatars.githubusercontent.com/u/28986134?s=64&v=4
 language:
-  - language: Javascript
-    percentage: 97.2
+  - language: JavaScript
+    percentage: 96.1
   - language: CSS
-    percentage: 2.8
-star: '257'
-fork: '56'
-url: https://github.com/replicate/inpainter
-banner: ./inpainter-banner.png
+    percentage: 3.5
+  - language: Shell
+    percentage: 0.4
+star: '276'
+fork: '46'
+url: https://github.com/replicate/paint-by-text
+banner: ./215248708-80787623-fff4-4b22-a548-e5c46b055244.png
 icon: https://cs-res.codehub.cn/vscode/node.svg
-video: ./Inpainter.mov
+video: ./paint-by-text.mov
 license: MIT
-order: 7
+order: 6
 ---
 
-# 🎨 Inpainter
+# 👩‍🎨 按文本绘画
 
-&nbsp; &nbsp;用于使用 Replicate API通过[Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion)进行修复的 Web GUI 。
+&nbsp; &nbsp;通过与生成式 AI 模型聊天来修改图像。
 
-&nbsp; &nbsp;在[inpainter.vercel.app](https://inpainter.vercel.app/)上尝试一下
+&nbsp; &nbsp;在[paintbytext.chat](http://paintbytext.chat)上尝试一下
 
-https://user-images.githubusercontent.com/2289/188992670-3dc9db47-fb8e-45c1-85ee-afc850009c48.mp4
+## 怎么运行的
 
-## 如何运行的
+&nbsp; &nbsp;该 app 由以下成员提供支持：
 
-🐢🚀 这是一个 Node.js 应用程序！它的动力来自：
+🚀 [Replicate](https://replicate.com/?utm_source=project&utm_campaign=paintbytext), 一个在云中运行机器学习模型的平台。
 
-- [Replicate](https://replicate.com/), 一个在云中运行机器学习模型的平台。
-- [Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion), 一种开源文本到图像生成模型。
-- 用于与 Replicate API 对话的Next.js [server-side API routes](pages/api) 
-- Next.js 用于修复 GUI 的 React 组件
-- [Tailwind CSS](https://tailwindcss.com/) 样式
-- [Lucide](https://lucide.dev/)图标
+🎨 [InstructPix2Pix](https://replicate.com/timothybrooks/instruct-pix2pix?utm_source=project&utm_campaign=paintbytext), 一种从文本生成图像的开源机器学习模型。
 
-## 发展
+▲ [Vercel](https://vercel.com/), 一个运行网络应用程序的平台。
 
-&nbsp; &nbsp;先决条件：
+⚡️ Next.js [server-side API routes](pages/api), 用于与复制 API 对话。
+👀 Next.js React components, 用于浏览器 UI。
+
+🍃 [Tailwind CSS](https://tailwindcss.com/), 用于样式。
 
 
-1. Node.js 的最新版本
-2. [复制 API 令牌](https://replicate.com/account)
+## Development
 
-
-&nbsp; &nbsp;在您的环境中设置复制 API 令牌：
-```
-REPLICATE_API_TOKEN=<your-token-here>
-```
-
-&nbsp; &nbsp;然后安装依赖项并运行服务器：
-```sh
-npm install
-npm run dev
-```
-
-&nbsp; &nbsp;打开[http://localhost:3000](http://localhost:3000)
-
+1. 安装最新版本的[Node.js](https://nodejs.org/)
+1. 复制您的[Replicate API token](https://replicate.com/account?utm_source=project&utm_campaign=paintbytext) 并将其设置在您的环境中：
+    ```
+    echo "REPLICATE_API_TOKEN=<your-token-here>" > .env.local
+    ````
+1. 安装依赖项并运行服务器：
+    ```
+    npm install
+    npm run dev
+    ```
+1. 在浏览器中打开[localhost:3000](http://localhost:3000) 就是这样！
+   
