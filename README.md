@@ -28,8 +28,9 @@ order: 7
 
 # 🎨 Inpainter
 
-用于使用 Replicate API通过[Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion)进行修复的 Web GUI 。
-在[inpainter.vercel.app](https://inpainter.vercel.app/)上尝试一下
+&nbsp; &nbsp;用于使用 Replicate API通过[Stable Diffusion](https://replicate.com/stability-ai/stable-diffusion)进行修复的 Web GUI 。
+
+&nbsp; &nbsp;在[inpainter.vercel.app](https://inpainter.vercel.app/)上尝试一下
 
 https://user-images.githubusercontent.com/2289/188992670-3dc9db47-fb8e-45c1-85ee-afc850009c48.mp4
 
