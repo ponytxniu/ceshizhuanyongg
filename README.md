@@ -94,7 +94,8 @@ docker-compose up -d
 
 &nbsp; &nbsp;运行后，您可以在浏览器中通过[http://localhost/install](http://localhost/install) 访问Dify仪表板并开始初始化安装过程。
 
-###配置
+
+### 配置
 
 &nbsp; &nbsp;如果您需要自定义配置，请参考我们的[docker-compose.yml](docker/docker-compose.yaml)文件中的注释并手动设置环境配置。进行更改后，请再次运行'docker-compose up -d' 
 
@@ -156,7 +157,7 @@ docker-compose up -d
 - Chase, H. (2022). LangChain [Computer software]. https://github.com/hwchase17/langchain
 - Liu, J. (2022). LlamaIndex [Computer software]. doi: 10.5281/zenodo.1234.
 
-For more information, please refer to the official website or license text of the respective software.
+&nbsp; &nbsp;欲了解更多信息，请参阅相应软件的官方网站或许可文本。
 
 ## 许可
 
