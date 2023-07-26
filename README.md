@@ -1,147 +1,275 @@
 ---
-name: PromptAppGPT
-description: >-
- PromptAppGPT 是一个基于低代码提示的快速应用程序开发框架。PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像生成、在线提示编辑器+编译器+运行器、自动用户界面生成、支持插件扩展等功能。PromptAppGPT旨在启用自然语言应用程序基于GPT的开发。
-author:
-  name: mleoking
-  avatar: https://avatars.githubusercontent.com/u/5763751?s=96&v=4
-contributors: []
-language:
-  - language: JavaScript
-    percentage: 95.5
-  - language: HTML
-    percentage: 2.8
-  - language: CSS
-    percentage: 1.7
-star: 235
-fork: 45
-url: https://github.com/mleoking/PromptAppGPT
-banner: ./images/pag-image-creator-edit.png
-icon: https://cs-res.codehub.cn/vscode/node.svg
-video: ./promptappgpt.mov
-license: MIT
-order: 20
+title: '【腾讯云Cloud Studio实战训练营】使用Cloud Studio&Flutter完成跨平台博客的搭建'
+subTitle: '使用Cloud Studio&Flutter完成跨平台博客的搭建'
+summary: '本文我将使用Cloud Studio 以及Flutter完成自己的一个博客平台的搭建。并且会将该项目作为模版，供大家使用。'
+tags: ['用户体验']
+date: '2023-07-22'
+author: '徐建国'
+avatar: '[https://help-assets.codehub.cn/enterprise/20230331113942.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-0.png)'
+description: Cloud Studio 是腾讯云自主研发的在线 IDE 集成开发环境。用户可以通过 Cloud Studio 创建项目的工作空间，进行在线编程、开发、调试等操作。Cloud Studio 还提供可分享的在线 IDE 开发环境功能。本文描述如何通过 Cloud Studio 实现 Flutter 项目的在线编程；再利用 CODING 的代码仓库托管代码、CI 流水线实现自动打包 APK 文件并存储在制品库。
+keywords: 在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作,CODING,Cloud Studio,Web IDE,Flutter,apk,流水线
 ---
 
-# 💡 PromptAppGPT
-&nbsp; &nbsp;PromptAppGPT 是一个基于低代码提示的快速应用程序开发框架。PromptAppGPT包含基于低代码提示的开发、GPT文本生成、DALLE图像生成、在线提示编辑器+编译器+运行器、自动用户界面生成、支持插件扩展等功能。PromptAppGPT旨在启用自然语言应用程序基于GPT的开发。
+# 引言
 
-**PromptAppGPT 显着降低了 GPT 应用程序开发的门槛，让任何人都可以用几行低代码开发类似 AutoGPT 的应用程序**
+云端 IDE 是基于云的集成开发环境，开发人员可以**远程编写运行**和调试代码，无需本地安装，仅通过浏览器即可开发软件。
 
-&nbsp; &nbsp;请参阅示例应用程序：[Imaginative Image Creator, Web & Image Searcher, My AutoGPT, ...](PagApps.md)
+与传统本地开发相比，云端开发环境主要有以下的优势：
 
-![PromptAppGPT](images/pag-image-creator-edit.png)
+- 快速启动项目进入开发状态，无需进行繁琐的环境配置
+- 可根据项目需求灵活调节硬件成本
+- 提供在线预览与协同编程，更好的共享和协作
+- 可方便地集成更多 DevOps 能力
 
-## 🛠️ 特征
+# 实战简介
 
-- ⚡ 基于低代码提示的快速应用程序开发
-- 🧠 用于文本生成的 GPT3/4 执行器
-- 🍯 用于图像生成的 Dalle 执行器
-- 🔌 执行器（插件）的可扩展性
-- #️⃣ 在线提示编辑器、编译器和运行器
-- ⚙️ 自动生成用户界面
-- 🧨 中英文用户界面
+- [Cloud Studio](https://cloudstudio.net) 是腾讯云下的一款基于浏览器的**集成式开发环境**（IDE），开发者根据其提供的编码模板和预设好的开发环境可以很方便地进行**项目开发**和**页面预览**。
 
-## 🚀 快速开始
+- [CODING](https://coding.net) 提供**一站式研发管理平台**及云原生开发工具，包括代码仓库、CI/CD、制品库、自动化测试等。
 
-1. 获取 OpenAI[API Key](https://platform.openai.com/account/api-keys).
-2. 访问网站[PromptAppGPT Web Home](http://promptappgpt.wangzhishi.net)或下载[Windows 10+ APP](dist/pag.exe).
-3. 设置 OpenAI 密钥/OpenAI Api 代理/OpenAI Gpt 模型。
-- OpenAI Key：从OpenAI获取的api密钥。
-- OpenAI Api Proxy：openai api的代理，如果您可以直接访问openai api，则代理为`https://api.openai.com/`, 否则代理应该是另一个 (e.g. `https://api.openai-proxy.com/`) 可以将您的请求代理到openai api的网站
-- OpenAI Gpt 模型: gpt-4/gpt-3.5-turbo
+本文将介绍这一个完整流程：
 
-![Set the OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model](images/pag-settings-note.png)
+用 [Cloud Studio](https://cloudstudio.net) 实现 **Flutter** 项目的云端编程；再利用 [CODING](https://coding.net) 的代码仓库托管代码、CI 流水线实现自动打包 **APK 文件**并存储在**制品库**。
 
-4. 选择并运行应用程序。
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/01.png)
 
-![Select and run a app](images/pag-image-creator-run1-note.png)
-![Select and run a app](images/pag-image-creator-run2-note.png)
-![Select and run a app](images/pag-image-creator-run3-note.png)
+你可以播放下方视频了解本次实战的全流程。文字版内容可参考剩余章节。
 
-5. 编辑并编译应用程序。
+<video
+  webkit-playsinline='true'
+  playsInline={true}
+  controls
+  controlsList='nodownload'
+  preload='auto'
+  src='https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/video.mp4'
+></video>
 
-![Edit and compile the app](images/pag-image-creator-edit-note.png)
+# 项目准备
 
+我们以 Flutter 团队提供的一个[教程项目](https://codelabs.developers.google.com/codelabs/flutter-boring-to-beautiful?hl=zh-cn#0)为例子，演示仅通过**浏览器**实现一个 Flutter 项目开发的全过程。
 
-## ⌨️ 发展
+## 创建项目
 
-&nbsp; &nbsp;PromptAppGPT 的代码基于 YAML 格式。要基本了解 YAML 格式，您可以参考[YAML cheatsheet](https://quickref.me/yaml).
+首先，在 [CODING](https://coding.net) 中新建一个项目，命名并填写项目相关信息。如没有 [CODING](https://coding.net) 团队，需要先进行免费注册。
 
-&nbsp; &nbsp;我们通过以下程序来说明如何在PromptAppGPT中进行应用程序开发。
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/02.png)
 
-``` yaml
----
-author: Leo
-name: Imaginative Image Creator
-description: Create imaginative images from any language with GPT and DALL·E
-gptRound: single
-failedRetries: 2
+## 代码拉取
 
-sysTask:
-  - executor: gpt
-    prompt: You are an imaginative image creator. 
+创建完项目之后，即可在左边栏中进入**代码仓库**创建仓库拉取项目代码，这里我们选择「**点击导入**」。
 
-userTask: 
-  - trigger: dalle_prompt=
-    executor: dalle
-    prompt: |
-      prompt: $i{Word to draw:@textarea=$e{=(.*)}}
-      n: $i{Num of images:@select#1/2/3/4=1}
-      size: $i{Size of images:@select#256x256/512x512/1024x1024=512x512}
-    outputer: dalle output $e{.*}
-  - executor: gpt
-    prompt: | 
-      Generate a detailed Dall-E prompt with several adjectives for the following text:
-      ```$i{Text to draw:@input}'''
-    outputer: dalle_prompt=$e{.*} 
-    validator: .{15,}
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/03.png)
 
-extra: 
+填写仓库地址并进行命名，点击「**完成创建**」，等待仓库导入成功后，即可看到项目代码。至此，项目准备完成。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/04.png)
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/05.png)
+
+# 在线编码
+
+在上一步中，我们完成了项目准备，现在，我们可以在 [Cloud Studio](https://cloudstudio.net/) 中导入这个项目，进行代码**编写**、**调试**和**预览**。
+
+## 创建工作空间
+
+由于 [CODING](https://coding.net/) 和 [Cloud Studio](https://cloudstudio.net/) 实现了账号互通，我们可以用 **CODING 账号**登录，完成账号授权。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/06.png)
+
+登录完成后，在左下角点击创建**工作空间**，导入 [CODING](https://coding.net/) 内的代码仓库，并且选择预设好 Flutter 环境的**开发环境**，点击创建，等待几秒，一个崭新的工作空间即创建完成。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/07.png)
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/08.png)
+
+## 安装插件与依赖
+
+[Cloud Studio](https://cloudstudio.net/) 与 VS code 一样，集成了许多**开发插件**。
+
+我们可以通过在线安装 VSCode 插件增强使用体验。
+
+1. 在左边栏选择「**扩展**」，安装 Flutter 和 Dart 插件，下载完成中点击**重新加载**即可完成插件安装。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/09.png)
+
+2. 打开终端，我们还需要初始化项目的依赖：
+
+```shell
+# 加载项目依赖
+
+flutter pub get
 ```
-**author**部分是作者姓名;**name** 是应用程序的名称；**description**部分是应用程序的描述；**gptRound** 部分确定是否将 gpt 用于 (`single`) 或者 multi-round (`multiple`)对话, 对于大多数应用程序，该值应为 `single`; **failedRetries** 部分设置失败或输出无效时重试的次数。
 
-**sysTask** 部分是由 `-` 分隔的任务集合，,设置gpt的行为,对于许多应用程序，此字段可以留空。当此部分不为空时，每个任务必须定义 `prompt` 和 `executor` 属性
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/10.png)
 
-- `executor` 是任务的执行者。
-- `prompt` 是输入执行器的文本。
+3. 提示 Dart 版本太低，我们需要先更新 Flutter：
 
-**userTask** 部分包含由  `-` 分隔的用户定义的任务. 每个任务必须定义`prompt` 和 `executor`属性, 并且`trigger`, `outputer` 和 `validator`是可选的. 应用程序以有序的方式循环执行用户任务，使用前一个任务的输出来匹配每个任务的，第一个通过匹配的任务是当前正在运行的任务。第一次运行时应用程序的输出为空。没有属性的任务可以匹配任何输出，并且这些任务应该放置在用户任务的末尾，以允许首先触发具有更明确条件的任务。
+```shell
+# 更新 Flutter 版本，先后执行以下命令
 
-- `trigger` 是任务的触发器，它是一个正则表达式。当任务的触发器与前一个任务的输出匹配时，任务就会运行。这是[正则表达式备忘单](https://quickref.me/regex).
-- `executor` 是任务的执行者。目前支持 `gpt`, `dalle`, `bingWeb`, `bingImage`, `webFetch`, `javaScript`, 和 `log` 的执行者
-- `prompt`是输入执行器的文本。其中 `prompt`, `$i{xxx}` 是用户输入，是从先前 `$e{xxx}` 任务输出中提取文本的提取器。
-- `outputer` 是用于后处理此任务的输出的文本。是从此 `$e{xxx}` 任务的输出中提取文本的提取器。
-- `validator` 是用于验证此任务的输出的正则表达式。如果其输出与正则表达式不匹配，应用程序将停止在当前任务处`validator` 。例如`validator: .{15,}` 检查任务输出的长度是否大于或等于15。
+flutter channel stable
 
-&nbsp; &nbsp;应用程序用户界面的输入是 `$i{xxx}`根据`prompt`.表达式的格式 `$i{xxx}` 为 `$i{input label@input type#select options=default value}`. 目前支持三种类型的输入： `select`, `input`, and `textarea`. 输入的选项 `select` input 以`/`为分隔
+flutter upgrade
+```
 
-&nbsp; &nbsp;表达式是从上一个此`$e{xxx}` 任务的输出中提取文本的提取器。表达式的格式为 `$e{xxx}` expression is `$e{regular expression}`如果正则表达式中存在组构造，则仅提取与该组匹配的文本，否则提取与整个正则表达式匹配的文本。
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/11.png)
 
-&nbsp; &nbsp;额外部分可以为空，并且当前未启用。
+4. 再次执行 `flutter pub get` 完成依赖加载。
 
-## ❤️ 贡献者
+## 项目启动/调试
 
-![Contributors](https://contrib.rocks/image?repo=mleoking/PromptAppGPT)
+执行完上一步的前置步骤后，现在，我们可以**启动项目**。
 
-## 🙋 常见问题解答
+[Cloud Studio](https://cloudstudio.net/) 可以快速生成**预览链接**，方便分享他人**展示项目**或**在线调试**。
 
-### 无法获取错误
+1. 首先执行 run 命令，将项目以 web 方式启动到 9000 端口。
 
-&nbsp; &nbsp;检查您是否可以访问互联网并正确设置 OpenAI Key/OpenAI Api Proxy/OpenAI Gpt Model。
+```shell
+# 启动
 
-### 网络安全错误
+flutter run -d web-server --web-port 9000 --web-hostname 0.0.0.0
+```
 
-&nbsp; &nbsp;当 PromptAppGPT 从网站启动时，浏览器安全检查会阻止对 openai api 的请求。您可以按照以下步骤解锁 PromptAppGPT 网站。
+2. 点击内置浏览器，即可看到预览效果 ，我们可以将这个链接分享给他人，他们可以**远程**打开该链接。
 
-**对于 Windows Chrome 用户：**
-1. 右键桌面，添加新快捷方式
-2. 将目标添加为“[PATH_TO_CHROME]\chrome.exe” --disable-web-security --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
-3. 单击 OK.
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/12.png)
 
-**对于 Mac Chrome 用户：**
-1. 打开 -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/13.png)
 
-**对于 Linux Chrome 用户：**
-1. google-chrome --disable-web-security -–allow-file-access-from-files
+接下来，我们将演示如何修改代码，并通过项目热加载快速看到修改结果。我们将会添加左边导航栏的图标，以便用户快速浏览前置图标以找到所需标签页。
 
+1. 找到 lib/src/shared/router.dart
+
+2. 替换 icon 代码，为每个导航目的地（首页、播放列表和用户）添加不同的前置图标：
+
+```dart
+const List<NavigationDestination> destinations = [
+  NavigationDestination(
+    label: 'Home',
+    icon: Icon(Icons.home), // Modify this line
+    route: '/',
+  ),
+  NavigationDestination(
+    label: 'Playlists',
+    icon: Icon(Icons.playlist_add_check), // Modify this line
+    route: '/playlists',
+  ),
+  NavigationDestination(
+    label: 'Artists',
+    icon: Icon(Icons.people), // Modify this line
+    route: '/artists',
+  ),
+];
+```
+
+3. 修改完成后，在终端中输入 q 进行**热加载**。
+
+4. 等待片刻，刷新页面即可看到最新的效果。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/14.png)
+
+## 提交代码
+
+[Cloud Studio](https://cloudstudio.net/) 也提供了图形化的源代码管理界面，左侧点击**源代码管理**，**暂存**我们刚刚修改了的文件，填写 **commit message**，点击「**提交**」和「**同步更改**」，即可提交代码到 [CODING](https://coding.net/)。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/15.png)
+
+至此，我们已经在 [Cloud Studio](https://cloudstudio.net/) 完成了**编写**、**调试**和**预览**。
+
+通过重复迭代，我们开发了一个满意的代码版本。
+
+接下来，我会演示如何通过 [CODING](https://coding.net/) **持续集成流水线**实现**自动化打包**。
+
+# CODING 打包 apk 制品
+
+首先，介绍一下什么是持续集成。以下是来自 [CODING 帮助文档](https://coding.net/help/docs/ci/intro.html)的介绍。
+
+![](https://help-assets.codehub.cn/enterprise/20230331160037.png)
+
+像**代码打包**这种重复性的工作，我们可以交给**持续集成**来完成，以下是使用步骤。
+
+1. 首先我们在项目的**制品管理**中新建一个制品，用于存放生存的 apk 文件。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/16.png)
+
+2. 然后在左侧导航栏点击**持续集成**，新建一个构建计划。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/17.png)
+
+3. 在自定义构建过程中选择我们刚刚创建的仓库，点击确认进入**流水线**编辑。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/21.png)
+
+本次 Flutter 的打包分为 4 个部分：
+
+- jdk 升级（由于 CODING 构建机默认是 jdk 1.8，我们需要升级成 jdk11）
+- 代码检出
+
+- 打包 apk
+
+- 推送带制品仓库
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/18.png)
+
+```shell
+pipeline {
+  agent any
+  stages {
+    stage('jdk upgrade') {
+      steps {
+        sh 'sudo add-apt-repository ppa:openjdk-r/ppa'
+        sh 'sudo apt-get update'
+        sh 'sudo apt-get install -y openjdk-11-jdk'
+        sh 'java -version'
+      }
+    }
+
+    stage('检出') {
+      steps {
+        checkout([
+          $class: 'GitSCM',
+          branches: [[name: GIT_BUILD_REF]],
+          userRemoteConfigs: [[
+            url: GIT_REPO_URL,
+            credentialsId: CREDENTIALS_ID
+          ]]])
+        }
+      }
+
+      stage('打包 apk') {
+        steps {
+          sh 'sudo apt-get install --only-upgrade bash'
+          sh 'wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.7.6-stable.tar.xz'
+          sh 'tar xf flutter_linux_3.7.6-stable.tar.xz'
+          sh 'export PATH="$PATH:`pwd`/flutter/bin" && cd ${PROJECT_PATH} && flutter build apk'
+        }
+      }
+
+      stage('推送到制品仓库') {
+        steps {
+          codingArtifactsGeneric(files: '${PROJECT_PATH}/build/app/outputs/flutter-apk/**.apk', repoName: 'apk')
+        }
+      }
+
+    }
+    environment {
+      JAVA_HOME = '/usr/lib/jvm/java-11-openjdk-amd64'
+    }
+  }
+```
+
+4. 完成流水线后，点击「**立即构建**」。
+
+如下图，流水线已经构建成功，进入制品仓库中可以看到构建后的 apk 制品。
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/19.png)
+
+![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/20.png)
+
+# 总结
+
+至此，我们通过 [Cloud Studio](https://cloudstudio.net) 和 [CODING](https://coding.net) 配合使用，只使用浏览器便实现了 Flutter 项目在云端的**创建、开发、管理、打包**的全过程。
+
+另外, [Cloud Studio](https://cloudstudio.net) 提供了许多编程语言的**模板和开发环境**，也集成了腾讯云 Serverless 技术，把前端开发项目、静态建站项目的**部署复杂度降到最低**，一键即可完成**线上部署**。
+
+不仅如此， [Cloud Studio](https://cloudstudio.net) 中还有一个 [metawork](https://cloudstudio.net/metawork) 协同套件，可以支持多人线上**协同编码**，可以跟同学、同事共同线上开发，实现 coding anytime anyway！
