@@ -227,7 +227,7 @@ git push origin master
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-24.png)
 
 
-# 五.Flutter博客网站的开发
+# 六.Flutter博客网站的开发
 
 「**Flutter**」是谷歌的移动UI框架，Flutter 最近发布了 Flutter V3.10.6，可以快速在 「**iOS**」、「**Android**」、「**Web**」 等多平台上构建高质量的原生用户界面。 「**Flutter**」 可以与现有的代码一起工作。在全世界，「**Flutter**」 正在被越来越多的开发者和组织使用，并且 Flutter 是完全免费、开源的。 目前「**Cloud Studio 云端 IDE**」 支持 「**Flutter**」 Web 应用开发。这就是为什么今天我们使用在 Web、macOS 应用、Android 和 iOS 应用上运行的 flutter 创建响应式博客主题。 
 
