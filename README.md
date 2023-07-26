@@ -5,7 +5,7 @@ summary: '本文我将使用Cloud Studio 以及Flutter完成自己的一个博�
 tags: ['用户体验']
 date: '2023-07-22'
 author: '徐建国'
-avatar: '![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-0.png'
+avatar: ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-0.png)
 description: Cloud Studio 是腾讯云自主研发的在线 IDE 集成开发环境。用户可以通过 Cloud Studio 创建项目的工作空间，进行在线编程、开发、调试等操作。Cloud Studio 还提供可分享的在线 IDE 开发环境功能。本文描述如何通过Cloud Studio&Flutter完成跨平台博客的搭建
 keywords: 在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作,CODING,Cloud Studio,Web IDE,Flutter,apk,流水线
 ---
@@ -61,7 +61,7 @@ Cloud Studio 内置预览插件，可以实时显示网页应用。当您的代�
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-9.png)
 
-**2.2实时调试网页**
+**2.3远程访问云服务器**
 
 Cloud Studio 支持您连接自己的云服务器，这样就可以在编辑器中查看云服务器上的文件，进行在线编程和部署工作。
 
@@ -72,7 +72,7 @@ Cloud Studio 支持您连接自己的云服务器，这样就可以在编辑器�
 
 # 三.登录注册
 
-Cloud Studio 在线编程平台支持使用[CODING (opens new window)]([https://coding.net/?from_column=20420&from=20420))账号和 GitHub 账号，以及微信登录，可以在[登录 (opens new window)]([https://cloudstudio.net/auth/realms/cloudstudio/protocol/openid-connect/auth?client_id=cloudstudio-apiserver&response_type=code&redirect_uri=https%3A%2F%2Foauth.cloudstudio.net%2Fapi%2Fpublic%2Foauth%2Fcallback%3Fsrc%3D%252F&team=&kc_idp_hint=))
+Cloud Studio 在线编程平台支持使用[CODING (opens new window)](https://coding.net/?from_column=20420&from=20420)账号和 GitHub 账号，以及微信登录，可以在[登录 (opens new window)](https://cloudstudio.net/auth/realms/cloudstudio/protocol/openid-connect/auth?client_id=cloudstudio-apiserver&response_type=code&redirect_uri=https%3A%2F%2Foauth.cloudstudio.net%2Fapi%2Fpublic%2Foauth%2Fcallback%3Fsrc%3D%252F&team=&kc_idp_hint=)
 界面输入相应的账号登录前往 Web IDE，这里我用的是微信登录。
 
 
