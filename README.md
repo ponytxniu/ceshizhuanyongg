@@ -6,30 +6,82 @@ tags: ['用户体验']
 date: '2023-07-22'
 author: '徐建国'
 avatar: 'https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-0.png'
-description: Cloud Studio 是腾讯云自主研发的在线 IDE 集成开发环境。用户可以通过 Cloud Studio 创建项目的工作空间，进行在线编程、开发、调试等操作。Cloud Studio 还提供可分享的在线 IDE 开发环境功能。本文描述如何通过 Cloud Studio 实现 Flutter 项目的在线编程；再利用 CODING 的代码仓库托管代码、CI 流水线实现自动打包 APK 文件并存储在制品库。
+description: Cloud Studio 是腾讯云自主研发的在线 IDE 集成开发环境。用户可以通过 Cloud Studio 创建项目的工作空间，进行在线编程、开发、调试等操作。Cloud Studio 还提供可分享的在线 IDE 开发环境功能。本文描述如何通过Cloud Studio&Flutter完成跨平台博客的搭建
 keywords: 在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作,CODING,Cloud Studio,Web IDE,Flutter,apk,流水线
 ---
 
-# 引言
+# 前言
 
-云端 IDE 是基于云的集成开发环境，开发人员可以**远程编写运行**和调试代码，无需本地安装，仅通过浏览器即可开发软件。
+本文我将使用Cloud Studio 以及Flutter完成自己的一个博客平台的搭建。并且会将该项目作为模版，供大家使用。
 
-与传统本地开发相比，云端开发环境主要有以下的优势：
+先来看一下效果
 
-- 快速启动项目进入开发状态，无需进行繁琐的环境配置
-- 可根据项目需求灵活调节硬件成本
-- 提供在线预览与协同编程，更好的共享和协作
-- 可方便地集成更多 DevOps 能力
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-1.png)
 
-# 实战简介
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-2.png)
 
-- [Cloud Studio](https://cloudstudio.net) 是腾讯云下的一款基于浏览器的**集成式开发环境**（IDE），开发者根据其提供的编码模板和预设好的开发环境可以很方便地进行**项目开发**和**页面预览**。
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-3.png)
 
-- [CODING](https://coding.net) 提供**一站式研发管理平台**及云原生开发工具，包括代码仓库、CI/CD、制品库、自动化测试等。
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-4.png)
 
-本文将介绍这一个完整流程：
 
-用 [Cloud Studio](https://cloudstudio.net) 实现 **Flutter** 项目的云端编程；再利用 [CODING](https://coding.net) 的代码仓库托管代码、CI 流水线实现自动打包 **APK 文件**并存储在**制品库**。
+# 一.Cloud Studio 
+
+Cloud Studio 是基于浏览器的集成式开发环境(IDE)，为开发者提供了一个永不间断的云端工作站。用户在使用CloudStudio 时无需安 装，随时随地打开浏览器就能在线编程。
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-5.png)
+
+大家也看到了，很多模版以及环境都有提供，大家也都知道我以前是搞Flutter的，于是就先尝试了一下Flutter模版，然后刚开始，可能确实不太会，但熟悉了一会，就发现他的好处了。
+
+Cloud Studio 作为在线IDE，包含代码高亮、自动补全、Git集成、终端等IDE的基础功能，同时支持实时调试、插件扩展等，可以帮助开发者快速完成各种应用的开发、编译与部署工作。我将这次的这个博客网站使用Cloud Studio推送到了Gitee，[大家可以访问]([https://cloudstudio.net](https://gitee.com/jianguo888/flutter_bloc_super))
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-6.png)
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-7.png)
+
+
+# 二.应用场景
+
+
+Cloud Studio 在线编程工具适用于以下几个场景：
+
+**2.1快速启动项目**
+
+使用 Cloud Studio 的预置环境，您可以直接创建对应类型的工作空间，快速启动项目进入开发状态，无需进行繁琐的环境配置。
+
+下面就是我的工作空间，大家可以下次使用的时候，进入对应的工作空间，就可以继续编写代码，很是方便。
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-8.png)
+
+**2.2实时调试网页**
+
+Cloud Studio 内置预览插件，可以实时显示网页应用。当您的代码发生改变之后，预览窗口会自动刷新，这样您就可以在 Cloud Studio 内实时开发调试网页了。
+
+下面这个就是我创建的第一个模版项目，你会发现很是方便。
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-9.png)
+
+**2.2实时调试网页**
+
+Cloud Studio 支持您连接自己的云服务器，这样就可以在编辑器中查看云服务器上的文件，进行在线编程和部署工作。
+
+只有有自己的云服务器，那么你就可以在这里通过配置，很方便的入手开发。
+
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-10.png)
+
+
+# 三.登录注册
+
+Cloud Studio 在线编程平台支持使用[CODING (opens new window)]([https://coding.net/?from_column=20420&from=20420))账号和 GitHub 账号，以及微信登录，可以在[登录 (opens new window)]([https://cloudstudio.net/auth/realms/cloudstudio/protocol/openid-connect/auth?client_id=cloudstudio-apiserver&response_type=code&redirect_uri=https%3A%2F%2Foauth.cloudstudio.net%2Fapi%2Fpublic%2Foauth%2Fcallback%3Fsrc%3D%252F&team=&kc_idp_hint=))
+界面输入相应的账号登录前往 Web IDE，这里我用的是微信登录。
+
+
+
+
+
+
+
+
 
 ![](https://help-assets.codehub.cn/enterprise/new-static/images/insight/flutter/01.png)
 
