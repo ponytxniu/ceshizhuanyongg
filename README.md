@@ -463,7 +463,7 @@ flutter build web --web-renderer html
 
 （2）通过嵌入 Markdown 徽章进行分享，将模板徽章嵌入 README 文件或者博客中，您的伙伴点击徽章即可获取模板；
 
-![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-40.png)
+![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-40.svg)
 
 
 
