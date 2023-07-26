@@ -5,7 +5,7 @@ summary: '本文我将使用Cloud Studio 以及Flutter完成自己的一个博�
 tags: ['用户体验']
 date: '2023-07-22'
 author: '徐建国'
-avatar: '[https://help-assets.codehub.cn/enterprise/20230331113942.png](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-0.png)'
+avatar: 'https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-0.png'
 description: Cloud Studio 是腾讯云自主研发的在线 IDE 集成开发环境。用户可以通过 Cloud Studio 创建项目的工作空间，进行在线编程、开发、调试等操作。Cloud Studio 还提供可分享的在线 IDE 开发环境功能。本文描述如何通过 Cloud Studio 实现 Flutter 项目的在线编程；再利用 CODING 的代码仓库托管代码、CI 流水线实现自动打包 APK 文件并存储在制品库。
 keywords: 在线编程,WebIDE,CloudIDE,云端IDE,在线IDE,云端开发工具,在线集成开发环境,开发环境分享,代码托管,在线开发,在线调试,软件团队协作,CODING,Cloud Studio,Web IDE,Flutter,apk,流水线
 ---
