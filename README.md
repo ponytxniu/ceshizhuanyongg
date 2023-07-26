@@ -175,6 +175,10 @@ Cloud Studio 在线编程平台支持使用[CODING (opens new window)](https://c
 
 # 五.使用 Git 进行版本控制
 
+
+Cloud Studio 云端 IDE 的工作空间支持从代码仓库创建，不过在此之前您需要将工作空间的 SSH Key 添加至对应代码托管平台的个人公钥列表。
+
+
 **5.1Cloud Studio 查看SSH公钥**
 
 这里我们点击个人头像，打开系统设置，里面有SSH公钥，然后我们把密钥复制，添加到Gitee
