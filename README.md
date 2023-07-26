@@ -35,6 +35,7 @@ Cloud Studio 是基于浏览器的集成式开发环境(IDE)，为开发者提�
 
 Cloud Studio 作为在线IDE，包含代码高亮、自动补全、Git集成、终端等IDE的基础功能，同时支持实时调试、插件扩展等，可以帮助开发者快速完成各种应用的开发、编译与部署工作。我将这次的这个博客网站使用Cloud Studio推送到了Gitee，[大家可以访问]([https://cloudstudio.net](https://gitee.com/jianguo888/flutter_bloc_super))
 [CODING](https://coding.net/)
+[大家可以访问](https://gitee.com/jianguo888/flutter_bloc_super)
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-6.png)
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-7.png)
