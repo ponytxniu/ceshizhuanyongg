@@ -112,7 +112,10 @@ Cloud Studio 在线编程平台支持使用[CODING (opens new window)](https://c
 注意：
 
 -**数量限制**：目前每个用户最多可以创建 10 个工作空间，并且只能同时运行一个工作空间，如果您需要打开另一个工作空间需要先关闭当前运行中的工作空间。
+
+
 -**时间限制**：每个用户每月可以免费使用工作空间共 1000 分钟，超出时间将产生扣费（连接云主机的工作空间无此限制）。
+
 
 *4.2.1工作空间界面简介*
 
@@ -127,9 +130,14 @@ Cloud Studio 在线编程平台支持使用[CODING (opens new window)](https://c
 我们可以通过终端来进行这些操作，点击菜单栏--终端--新终端，会在底部打开一个面板，点击【终端】切换到终端。
 
 *4.2.2管理工作空间*
+
+
 在 Cloud Studio 云端 IDE 的工作空间列表页面，您可以运行、停止、删除和恢复工作空间。
 
+
 **运行**
+
+
 单击对应的工作空间卡片，就会在新的页面打开并运行该空间，此时该工作空间卡片上会显示“运行中”状态。
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-16.png)
@@ -137,16 +145,22 @@ Cloud Studio 在线编程平台支持使用[CODING (opens new window)](https://c
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-17.png)
 
 **停止**
+
+
 对于处在“运行中”状态的工作空间，单击卡片右边的【停止】，就可以停止运行该工作空间。
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-18.png)
 
 **删除**
+
+
 您可以删除未运行的工作空间，单击工作空间卡片右下角的【删除】即可删除。
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-19.png)
 
 **恢复**
+
+
 为了防止误删除，已删除的工作空间会展示在下方“已删除的工作空间”列表中，保留24小时。在此之前您可以随时单击【恢复】，还原您的工作空间，超过 24 小时未恢复的工作空间将被永远销毁。
 
 
@@ -162,6 +176,8 @@ Cloud Studio 在线编程平台支持使用[CODING (opens new window)](https://c
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-21.png)
 
 **5.2Gitee添加SSH公钥**
+
+
 在下图，添加SSH公钥，补充标题和公钥
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-22.png)
@@ -182,6 +198,8 @@ git config --global user.email "852851198@qq.com"
 ```
 
 **5.5Cloud Studio提交代码**
+
+
 然后初始化仓库，提交修改，添加commit信息，然后推送
 
 ```shell
@@ -204,6 +222,8 @@ git push origin master
 
 
 **6.1创建项目**
+
+
 打开云IDE之后，创建一个Flutter项目，当前，我使用的是 「**Flutter 3.0.1**」
 
 创建完成之后，我们就可以编写代码
@@ -238,6 +258,8 @@ cd ./ && flutter pub get && flutter run -d web-server --web-port 9000  --web-hos
 这个时候，说明我们的环境是ok的。我们可以后面的工作了
 
 **6.2.打开端口面板实时预览调试**
+
+
 点击最右边的按钮弹出预览页面。
 
 看到这些红色的文字 To hot restart changes while running, press "r" or "R". 说明项目编译好了。
@@ -257,6 +279,7 @@ cd ./ && flutter pub get && flutter run -d web-server --web-port 9000  --web-hos
 3.一直卡在 Loading 界面可尝试刷新预览界面。
 
 **6.3发布web版**
+
 
 我们希望你完成迁移后尽快将其发布，可以作为预览版：
 
@@ -279,6 +302,7 @@ flutter create .
 
 
 *6.3.2. 打包web版本*
+
 
 我们知道要给android手机用,需要打包apk出来, 要给iPhone手机用,需要打包ipa出来;同样的道理要给浏览器用,也需要打包web相关代码.
 
@@ -342,10 +366,10 @@ flutter build web --web-renderer html
 
 **6.4常见问题**
 
--坑1:  找到了index.html,用浏览器打开一片空白
+-**坑1**:  找到了index.html,用浏览器打开一片空白
 这个属于正常的, 这个不像前端web ,html css js那套,点击index.html就能访问的.  在flutter里面是不能直接访问的,一定要放到容器里面去才能访问,如:tomcat等
 
--坑2:  已经用nginx代理,用浏览器打开还是一片空白
+-**坑2**:  已经用nginx代理,用浏览器打开还是一片空白
 那是因为文件路径引用不对.解决办法有2种  方法1:  用编辑器打开index.html,能看到源文件,把<base href="/">,改成<base href="">
 
 方法2:  用编辑器打开index.html,能看到源文件,把<base href="/">,改成你服务器的路径比喻说:<base href="http://你的服务器ip:0-65536/web/">
@@ -373,9 +397,14 @@ flutter build web --web-renderer html
 自定义模板是 Cloud Studio 云端 IDE 推出的面向团队模板能力的功能。该功能支持将当前项目作为自定义模板，能够覆盖到 Git 仓库的项目、普通项目、示例项目等，很大程度上提高了团队标准化代码开发环境的一大诉求。
 
 **7.1自定义模板功能简介**
+
+
 当前自定义模板实现的功能主要有四个方面，创建、发布、分享和管理自定义模板。
 
+
 **7.2创建自定义模板**
+
+
 当您处在当前项目 IDE 中，您可以创建自定义模板：
 
 这里我把我的Flutter 博客网站发布成模版。
@@ -396,6 +425,8 @@ flutter build web --web-renderer html
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-37.png)
 
 **7.3发布自定义模板**
+
+
 当您成功填写完自定义模板信息后，您可以进行自定义模板发布：
 
 （1）点击“完成”即可发布您的自定义模板；
@@ -410,7 +441,9 @@ flutter build web --web-renderer html
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-39.png)
 
 
-7.4分享自定义模板
+**7.4分享自定义模板**
+
+
 当您的模板发布成功后，您可以有两种方式分享自定义模板：
 
 （1）进入分享页，复制您的自定义模板链接，分享给您的伙伴；
@@ -430,9 +463,17 @@ flutter build web --web-renderer html
 Cloud Studio 作为 Web IDE/在线 IDE/Cloud IDE，和本地 IDE 相比具有以下优势：
 
 -**无需安装，跨平台**：只要有浏览器就可以使用；预置常用环境，无需手动安装；支持创建网页预览，在线开发调试。
+
+
 -**全功能**：无需下载安装，随时随地开发编码，拥有媲美本地 IDE 的流畅编码体验。
+
+
 -**多环境**：内置 Node.js、Java、Python 等常见环境，也可以连接到云服务器进行资源管理。
+
+
 -**兼容 VS Code 插件**：若默认的配置无法满足需求，可以在线安装 VS Code 插件来增强使用体验。
+
+
 -**持久化和快速加载**：随开随写，随时保存，再也无需担心断电未保存，不浪费您的每一份灵感。
 
 在我的体验下，概括来说就是Cloud Studio 是用来开发中小型项目，在线修改代码，或者连接云服务器进行部署工作的不二之选。真正的达到了一键秒开、全持久化、预置环境及内置开发工具，跨团队无缝复制和共享，让开发化繁为简。
