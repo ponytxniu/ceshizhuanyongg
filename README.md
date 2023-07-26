@@ -273,7 +273,7 @@ cd ./ && flutter pub get && flutter run -d web-server --web-port 9000  --web-hos
 
 点击最右边的按钮弹出预览页面。
 
-看到这些红色的文字 To hot restart changes while running, press "r" or "R". 说明项目编译好了。
+看到这些红色的文字 「**To hot restart changes while running, press "r" or "R"**」. 说明项目编译好了。
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-29.png)
 
@@ -285,7 +285,7 @@ cd ./ && flutter pub get && flutter run -d web-server --web-port 9000  --web-hos
 
 ![](https://help-assets-1257242599.cos.ap-shanghai.myqcloud.com/enterprise/2023/1/1-31.png)
 
-1.目前 Flutter Web 应用不支持热更新，需要手动刷新页面。
+1.目前 「**Flutter Web**」 应用不支持热更新，需要手动刷新页面。
 2.要项目编译完成才能代码预览页面， 否则会一直卡在 Loading 界面。
 3.一直卡在 Loading 界面可尝试刷新预览界面。
 
@@ -349,7 +349,7 @@ content_copy
   main.dart.js.map
 ```
 
-启动 Web 服务器（例如，python -m SimpleHTTPServer 8000，或使用 [dhttpd](https://pub-web.flutter-io.cn/packages/dhttpd) package），然后打开 /build/web 目录。在浏览器中访问 localhost:8000（前文用 Python 启动的服务器）以查看应用程序的 release 版本。
+启动 Web 服务器（例如，「**python -m SimpleHTTPServer 8000**」，或使用 [dhttpd](https://pub-web.flutter-io.cn/packages/dhttpd) package），然后打开 /build/web 目录。在浏览器中访问 「**localhost:8000**」（前文用 Python 启动的服务器）以查看应用程序的 release 版本。
 
 经过测试,上面三种方式都可以打包web版本, 其中第一种是针对移动端的打包方式, 第二种是一般的打包方式, 第三种是针对pc端的打包方式.
 
